@@ -61,6 +61,7 @@ def commons(name, dst, width=1400):
     p = next(iter(d["query"]["pages"].values()))
     ii = p["imageinfo"][0]; md = ii.get("extmetadata", {})
     art = re.sub("<[^>]+>", "", md.get("Artist", {}).get("value", "")).strip()
+    art = re.split(r" - |\(|;|\n", art)[0].strip()[:40] or "Wikimedia Commons"
     lic = md.get("LicenseShortName", {}).get("value", "")
     fetch(ii.get("thumburl") or ii["url"], dst)
     return dst, (f"{art} ({lic})" if lic and "public domain" not in lic.lower() else "")

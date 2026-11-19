@@ -5,7 +5,7 @@ Keep it lean: no subagents, ≤6 web searches per channel, one QA look per video
 
 ## 0. Setup (≈3 min, every run starts fresh)
 ```
-git clone <repo> /home/claude/ws && cd /home/claude/ws
+git clone --depth 1 https://github.com/adityabakshi613-stack/shorts-media /home/claude/ws && cd /home/claude/ws && mkdir -p /home/claude/engine && cp engine/* /home/claude/engine/
 pip install --break-system-packages -q kokoro-onnx soundfile faster-whisper
 mkdir -p /home/claude/models && cd /home/claude/models && \
  curl -sL -o kokoro.onnx https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx && \
@@ -32,7 +32,7 @@ Playwright Chromium is preinstalled (/opt/pw-browsers). Fonts: Poppins is instal
 Read `out/<id>_sheet.jpg` once: no text cut off, card matches line, no emoji on faces, logo outro present. Fix spec and re-render only if needed.
 
 ## 4. Publish links
-`engine/publish.sh out/<id>.mp4` → public GitHub release asset URL (repo release tag = date). Same for `_cover.jpg`.
+`bash engine/publish.sh out/*.mp4` → force-pushes today's files to orphan branch `media` (repo stays small) and prints commit-pinned raw URLs. Wait ~60 s, check one URL returns 200 with `curl -sI`, then schedule. Metricool and vidIQ keep their own copies.
 
 ## 5. Schedule
 - WE → Metricool brand 7870926 (IG @wealth.extreme + YouTube), tz Asia/Calcutta. Existing queue holds 05:30 and 22:30 IST; new slots: 19:30, 02:30 (+1d), 08:00 (+1d) IST. Check getScheduledPosts for the day first; never double-book a slot.
