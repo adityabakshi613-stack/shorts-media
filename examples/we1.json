@@ -1,0 +1,16 @@
+{"id":"WE_2026-11-19_nvidia_no_ceo","theme":"we","speed":1.12,
+"beats":[
+{"say":"Nvidia just made $115.8 billion in 3 months.","bg":{"img":"commons:NVIDIA Headquarters.jpg"},"card":{"type":"hero","big":"$115.8B","sub":"in 3 months"},"keys":["$115.8","billion"]},
+{"say":"And it did it without Jensen Huang.","bg":{"img":"commons:Jensen huang stanford 2026-04-30 025.jpg"},"keys":["without"]},
+{"say":"Huang stepped down as CEO just last week.","bg":{"img":"commons:Jensen Huang Stanford 2026-04-30 010 (cropped).jpg","blur":10},"card":{"type":"photo","img":"commons:Jensen Huang Stanford 2026-04-30 010 (cropped).jpg"},"keys":["CEO"]},
+{"say":"His CFO, Colette Kress, is running the company for now.","bg":{},"card":{"type":"icon","emoji":"👩‍💼"},"keys":["Kress"]},
+{"say":"Revenue more than doubled in a single year.","bg":{"img":"commons:Nvidia sign.jpg","blur":8},"card":{"type":"versus","a":{"label":"Last year","value":"$57B"},"b":{"label":"This year","value":"$115.8B"}},"keys":["doubled"]},
+{"say":"Wall Street expected about $109 billion.","bg":{"img":"commons:NVIDIA Headquarters.jpg","blur":6},"card":{"type":"hero","big":"$109B","sub":"expected"},"keys":["expected"]},
+{"say":"Nvidia beat that by almost 7 billion.","bg":{},"card":{"type":"hero","big":"+$6.7B"},"keys":["beat"]},
+{"say":"Data centers alone brought in $107.6 billion.","bg":{"img":"commons:BalticServers data center.jpg"},"card":{"type":"hero","big":"$107.6B","sub":"data centers"},"keys":["data","centers"]},
+{"say":"That's 93% of everything it sold.","bg":{"img":"commons:BalticServers data center.jpg","blur":8},"card":{"type":"bars","items":[{"label":"Data center","value":"93%","num":93},{"label":"Everything else","value":"7%","num":7}]},"keys":["93%"]},
+{"say":"It also handed $28.1 billion back to shareholders in one quarter.","bg":{},"card":{"type":"hero","big":"$28.1B","sub":"back to shareholders"},"keys":["shareholders"]},
+{"say":"So here's the real question.","bg":{"img":"commons:Nvidia sign.jpg","blur":3},"keys":["question."]},
+{"say":"Does Nvidia even need its founder anymore? Tell me below.","bg":{},"card":{"type":"icon","emoji":"🤔"},"keys":["founder"]}
+],
+"outro_say":"Follow Wealth Extreme for the money behind the headlines."}
