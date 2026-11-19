@@ -1,0 +1,6 @@
+{"id":"WE_test_studio","theme":"we","speed":1.12,
+"beats":[
+{"say":"Nvidia just made $115.8 billion in 3 months.","bg":{},"card":{"type":"studio","els":[{"k":"icon","n":"Money bag","x":540,"y":700,"s":420},{"k":"icon","n":"Coin","x":250,"y":520,"s":130,"r":-15},{"k":"icon","n":"Coin","x":840,"y":600,"s":110,"r":20},{"k":"num","t":"$115.8B","y":1060,"s":200}]},"keys":["$115.8"]},
+{"say":"Revenue more than doubled in a single year.","bg":{},"card":{"type":"studio","els":[{"k":"bars","items":[{"label":"2025","value":"$57B","num":57},{"label":"2026","value":"$115.8B","num":115.8}]},{"k":"icon","n":"Chart increasing","x":860,"y":480,"s":170}]},"keys":["doubled"]},
+{"say":"Wall Street expected about $109 billion.","bg":{"img":"commons:NVIDIA Headquarters.jpg","blur":12},"card":{"type":"studio","els":[{"k":"logo","img":"commons:NVIDIA logo.svg","x":540,"y":640,"s":330},{"k":"pill","t":"$109B expected","x":230,"y":930,"s":76}]},"keys":["expected"]}
+],"outro_say":"Follow Wealth Extreme for the money behind the headlines."}

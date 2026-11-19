@@ -16,8 +16,8 @@ UA = {"User-Agent": "WealthExtremeShorts/1.0 (https://www.instagram.com/wealth.e
 THEMES = {
   "we": dict(accent="#36F08F", accent2="#C9D3D6", tint=(4, 40, 22), glass="rgba(10,30,20,0.55)",
              font="Poppins", cap_font="Poppins", cap_hi="&H008FF036", voice="am_michael",
-             plate="logo_we.png", brand=["Wealth", "Extreme"],
-             bgm=[443, 587, 140, 127, 52], grad=((2, 22, 12), (0, 0, 0))),
+             plate="logo_we.png", brand=["Wealth", "Extreme"], caps=False, cap_y=1440, cap_size=74,
+             bgm=[443, 587, 140, 127, 52], grad=((12, 60, 36), (1, 8, 4))),
   "gs": dict(accent="#FF2BD6", accent2="#22E6FF", tint=(40, 6, 48), glass="rgba(30,8,40,0.55)",
              font="Poppins", cap_font="Poppins", cap_hi="&H00D62BFF", voice="am_michael",
              plate="logo_gs.png", brand=["Gaming", "Sane"],
@@ -117,6 +117,13 @@ def map_beats(beats, words):
     out[-1] = (out[-1][0], len(words))
     return out
 
+# ---------------- Fluent 3D icons (MIT, microsoft/fluentui-emoji) ----------------
+def icon3d(name, wd):
+    slug = name.strip()
+    fn = slug.lower().replace(" ", "_").replace("-", "_") + "_3d.png"
+    url = "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/" + urllib.parse.quote(slug) + "/3D/" + fn
+    return fetch(url, os.path.join(wd, "i3d_" + fn))
+
 # ---------------- cards (HTML glass -> PNG) ----------------
 CSS = """
 *{margin:0;padding:0;box-sizing:border-box} body{width:1080px;height:1920px;background:transparent;font-family:'%(font)s',sans-serif;}
@@ -143,6 +150,18 @@ CSS = """
 .photo{border-radius:44px;overflow:hidden;border:4px solid rgba(255,255,255,.55);box-shadow:0 30px 90px rgba(0,0,0,.65),0 0 60px %(acc)s55}
 .photo img{width:860px;height:640px;object-fit:cover;display:block}
 .emo{font-size:300px;line-height:1;filter:drop-shadow(0 20px 40px rgba(0,0,0,.6))}
+.st{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.i3{position:absolute;filter:drop-shadow(0 24px 30px rgba(0,0,0,.55))}
+.gnum{position:absolute;left:0;right:0;text-align:center;font-weight:900;letter-spacing:-4px;line-height:1;
+  background:linear-gradient(180deg,#ffffff 0%%,#dff7ea 45%%,%(acc)s 100%%);-webkit-background-clip:text;color:transparent;
+  filter:drop-shadow(0 8px 0 rgba(0,40,20,.55)) drop-shadow(0 0 28px %(acc)s88)}
+.gold{background:linear-gradient(180deg,#fff7c2 0%%,#ffd34d 50%%,#d18a00 100%%);-webkit-background-clip:text;color:transparent;filter:drop-shadow(0 8px 0 rgba(90,50,0,.6)) drop-shadow(0 0 24px #ffc83d77)}
+.pill{position:absolute;padding:14px 34px;border-radius:22px;font-weight:900;font-size:64px;color:#fff;
+  background:linear-gradient(180deg,#5cf5a8,#18b964);box-shadow:0 10px 0 #0b6b3a,0 20px 40px rgba(0,0,0,.5);transform:rotate(-4deg)}
+.chip{position:absolute;padding:10px 28px;border-radius:18px;font-weight:800;font-size:54px;color:#fff;background:linear-gradient(180deg,#e9eef0,#9aa6ab);color:#1d2a24;box-shadow:0 8px 0 #59646a}
+.sb{position:absolute;bottom:0;border-radius:26px 26px 6px 6px;box-shadow:inset -14px 0 0 rgba(0,0,0,.18),0 20px 40px rgba(0,0,0,.45)}
+.sbl{position:absolute;text-align:center;font-weight:800;font-size:44px;color:#fff}
+.tile{position:absolute;border-radius:48px;overflow:hidden;box-shadow:0 26px 50px rgba(0,0,0,.55),0 0 50px %(acc)s55;background:#fff;display:flex;align-items:center;justify-content:center}
 """
 
 def esc(s): return str(s).replace("&", "&amp;").replace("<", "&lt;")
@@ -174,6 +193,39 @@ def card_html(c, th, wd, credits):
         inner = f'<div class="g">{rows}</div>'
     elif t == "icon":
         inner = f'<div style="text-align:center"><div class="emo">{c["emoji"]}</div>' + (f'<div class="g" style="margin-top:30px;padding:26px 46px"><div class="big" style="font-size:150px">{big}</div></div>' if big else "") + "</div>"
+    elif t == "studio":
+        # free layout of 3D icons, glossy numbers, pills, chips, bars, logo tiles. Coordinates in px on 1080x1920.
+        parts = []
+        for el in c["els"]:
+            k = el["k"]; x, y = el.get("x", 540), el.get("y", 700)
+            if k == "icon":
+                sz = el.get("s", 380); src = data_uri(icon3d(el["n"], wd))
+                parts.append(f'<img class="i3" src="{src}" style="left:{x-sz//2}px;top:{y-sz//2}px;width:{sz}px;transform:rotate({el.get("r",0)}deg)">')
+            elif k == "num":
+                sz = el.get("s", 230); cls = "gnum gold" if el.get("gold") else "gnum"
+                parts.append(f'<div class="{cls}" style="top:{y-sz//2}px;font-size:{sz}px">{esc(el["t"])}</div>')
+            elif k == "pill":
+                parts.append(f'<div class="pill" style="left:{x}px;top:{y}px;font-size:{el.get("s",64)}px">{esc(el["t"])}</div>')
+            elif k == "chip":
+                parts.append(f'<div class="chip" style="left:{x}px;top:{y}px">{esc(el["t"])}</div>')
+            elif k == "logo":
+                sz = el.get("s", 300); src = data_uri(get_media(el["img"], wd, credits))
+                parts.append(f'<div class="tile" style="left:{x-sz//2}px;top:{y-sz//2}px;width:{sz}px;height:{sz}px;background:{el.get("bg","#fff")}"><img src="{src}" style="max-width:82%;max-height:82%"></div>')
+            elif k == "bars":
+                items = el["items"]; mx = max(i["num"] for i in items) or 1; bw = el.get("w", 170); gap = 60
+                tot = len(items) * bw + (len(items) - 1) * gap; x0 = 540 - tot // 2; base = el.get("base", 1150); hmax = el.get("h", 560)
+                for j, it in enumerate(items):
+                    h = int(80 + (hmax - 80) * it["num"] / mx); xl = x0 + j * (bw + gap)
+                    col = "linear-gradient(180deg,#7dffc0,#22c771)" if j == len(items) - 1 else "linear-gradient(180deg,#d8dee0,#7f8a8f)"
+                    parts.append(f'<div class="sb" style="left:{xl}px;top:{base-h}px;width:{bw}px;height:{h}px;background:{col}"></div>')
+                    parts.append(f'<div class="sbl" style="left:{xl-40}px;width:{bw+80}px;top:{base+14}px">{esc(it["label"])}</div>')
+                    if it.get("value"): parts.append(f'<div class="sbl" style="left:{xl-40}px;width:{bw+80}px;top:{base-h-62}px;color:{"#7dffc0" if j == len(items)-1 else "#fff"}">{esc(it["value"])}</div>')
+            elif k == "grid":  # icon array, e.g. people
+                n = el.get("n", 30); cols = el.get("cols", 6); sz = el.get("s", 90); src = data_uri(icon3d(el["icon"], wd))
+                x0 = 540 - cols * sz // 2
+                for q in range(n):
+                    parts.append(f'<img class="i3" src="{src}" style="left:{x0 + (q % cols) * sz}px;top:{y + (q // cols) * int(sz*0.85)}px;width:{sz}px">')
+        return f"<html><head><style>{CSS % dict(font=th['font'], acc=th['accent'], acc2=th['accent2'], top=0, bigsz=200)}</style></head><body><div class='st'>{''.join(parts)}</div></body></html>"
     else:
         raise ValueError(t)
     css = CSS % dict(font=th["font"], acc=th["accent"], acc2=th["accent2"], top=top, bigsz=bigsz)
@@ -292,7 +344,7 @@ WrapStyle: 0
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: C,{th['cap_font']},92,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,0,0,1,5,3,5,70,70,0
+Style: C,{th['cap_font']},{th.get('cap_size', 92)},&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,0,0,1,5,3,5,70,70,0
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -311,12 +363,12 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             st = w["s"]; en = ch[k + 1]["s"] if k + 1 < len(ch) else end_chunk
             parts = []
             for j, x in enumerate(ch[:k + 1]):
-                txt = re.sub(r"[{}\\]", "", x["w"]).upper()
+                txt = re.sub(r"[{}\\]", "", x["w"]); txt = txt.upper() if th.get("caps") else txt
                 if j < k: parts.append(r"{\1c&H00B4B4B4&\bord5\3c&H00000000&\4a&H96&}" + txt)
                 elif norm(x["w"]) in keyset:
                     parts.append(r"{\1c&H00FFFFFF&\3c" + th["cap_hi"] + r"&\bord12\4a&HFF&\fscx108\fscy108}" + txt)
                 else: parts.append(r"{\1c&H00FFFFFF&\bord5\3c&H00000000&\fscx106\fscy106}" + txt)
-            pop = r"{\pos(540,1330)\t(0,80,\fscx104\fscy104)}"
+            pop = r"{\pos(540,%d)\t(0,80,\fscx104\fscy104)}" % th.get("cap_y", 1330)
             ev.append(f"Dialogue: 0,{ass_time(st)},{ass_time(en)},C,,0,0,0,,{pop}" + " ".join(parts))
     open(out, "w").write(hdr + "\n".join(ev) + "\n")
     return out

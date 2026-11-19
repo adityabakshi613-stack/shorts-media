@@ -1,0 +1,6 @@
+{"id":"GS_test_footage","sources":{"t1":"src/gta6_t1.mp4"},"credit":"Footage: Rockstar Games (GTA VI Trailer 1)",
+"beats":[
+{"say":"GTA 6 is finally out, and it took 13 years.","clip":{"src":"t1","t":6},"num":"13","keys":["13"]},
+{"say":"GTA 5 launched back in 2013.","clip":{"src":"t1","t":22},"num":"2013","keys":["2013."],"glitch":true},
+{"say":"Now Vice City is back, bigger than ever.","clip":{"src":"t1","t":40},"keys":["Vice","City"]}
+],"outro_say":"Follow Gaming Sane for daily gaming news."}
