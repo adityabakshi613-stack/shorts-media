@@ -1,0 +1,13 @@
+{"id":"GS_2026-11-20_007_goty","sources":{"t1":"src/bond.mp4"},"credit":"Footage: IO Interactive (007 First Light Gameplay Trailer)",
+"beats":[
+{"say":"James Bond is up for Game of the Year.","clip":{"src":"t1","t":8},"keys":["Game","Year."]},
+{"say":"007 First Light just got a Game Awards nomination.","clip":{"src":"t1","t":24},"num":"007","keys":["007"],"glitch":true},
+{"say":"It comes from IO Interactive, the Hitman studio.","clip":{"src":"t1","t":36},"keys":["Hitman"]},
+{"say":"You play a young, reckless Bond in MI6 training.","clip":{"src":"t1","t":44},"keys":["MI6"]},
+{"say":"It was delayed from March to May 27.","clip":{"src":"t1","t":68},"num":"27","keys":["delayed"],"glitch":true},
+{"say":"Now it faces GTA 6 for the top prize.","clip":{"src":"t1","t":84},"keys":["GTA"]},
+{"say":"GTA 6 leads the show with 8 nominations.","clip":{"src":"t1","t":76},"num":"8","keys":["8"]},
+{"say":"Resident Evil Requiem and Zelda are in too.","clip":{"src":"t1","t":52},"keys":["Zelda"],"glitch":true},
+{"say":"The winner gets crowned December 10.","clip":{"src":"t1","t":60},"num":"10","keys":["December"]},
+{"say":"So, could Bond beat Vice City?","clip":{"src":"t1","t":92},"keys":["Bond"],"glitch":true}
+],"outro_say":"Follow Gaming Sane for daily gaming news."}

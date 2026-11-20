@@ -1,0 +1,120 @@
+{
+"id": "GS_2026-11-20_gta6_8_noms",
+"sources": {
+"t1": "src/gta6_t2.mp4"
+},
+"credit": "Footage: Rockstar Games (GTA VI Trailer 2)",
+"beats": [
+{
+"say": "GTA 6 just got 8 Game Awards nominations.",
+"clip": {
+"src": "t1",
+"t": 8
+},
+"num": "8",
+"keys": [
+"8"
+]
+},
+{
+"say": "That's the most of any game this year.",
+"clip": {
+"src": "t1",
+"t": 36
+},
+"keys": [
+"most"
+],
+"glitch": true
+},
+{
+"say": "And it was nominated before it even launched.",
+"clip": {
+"src": "t1",
+"t": 28
+},
+"keys": [
+"before"
+]
+},
+{
+"say": "Nominees dropped on November 17.",
+"clip": {
+"src": "t1",
+"t": 52
+},
+"num": "17",
+"keys": [
+"17."
+]
+},
+{
+"say": "GTA 6 came out just two days later.",
+"clip": {
+"src": "t1",
+"t": 96
+},
+"keys": [
+"two"
+],
+"glitch": true
+},
+{
+"say": "Reviews landed at a 99 on Metacritic.",
+"clip": {
+"src": "t1",
+"t": 129
+},
+"num": "99",
+"keys": [
+"99"
+]
+},
+{
+"say": "Now it's up for Game of the Year.",
+"clip": {
+"src": "t1",
+"t": 147
+},
+"keys": [
+"Game",
+"Year."
+],
+"glitch": true
+},
+{
+"say": "Against Resident Evil Requiem, 007 First Light and Zelda.",
+"clip": {
+"src": "t1",
+"t": 111
+},
+"keys": [
+"Zelda."
+]
+},
+{
+"say": "Winners are revealed December 10.",
+"clip": {
+"src": "t1",
+"t": 116
+},
+"num": "10",
+"keys": [
+"December"
+]
+},
+{
+"say": "Can anything stop Vice City now?",
+"clip": {
+"src": "t1",
+"t": 88
+},
+"keys": [
+"Vice",
+"City"
+],
+"glitch": true
+}
+],
+"outro_say": "Follow Gaming Sane for daily gaming news."
+}

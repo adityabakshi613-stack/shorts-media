@@ -1,0 +1,121 @@
+{
+"id": "GS_2026-11-20_re9_goty",
+"sources": {
+"t1": "src/re9.mp4"
+},
+"credit": "Footage: Capcom (Resident Evil Requiem Reveal Trailer)",
+"beats": [
+{
+"say": "Resident Evil just entered the Game of the Year fight.",
+"clip": {
+"src": "t1",
+"t": 167
+},
+"keys": [
+"Game",
+"Year"
+]
+},
+{
+"say": "Requiem is nominated at The Game Awards 2026.",
+"clip": {
+"src": "t1",
+"t": 202
+},
+"num": "2026",
+"keys": [
+"Requiem"
+],
+"glitch": true
+},
+{
+"say": "It's the 9th main Resident Evil game.",
+"clip": {
+"src": "t1",
+"t": 4
+},
+"num": "9",
+"keys": [
+"9th"
+]
+},
+{
+"say": "It launched on February 27 this year.",
+"clip": {
+"src": "t1",
+"t": 33
+},
+"num": "27",
+"keys": [
+"February"
+]
+},
+{
+"say": "You play FBI analyst Grace Ashcroft.",
+"clip": {
+"src": "t1",
+"t": 46
+},
+"keys": [
+"Grace"
+],
+"glitch": true
+},
+{
+"say": "And the story goes back to Raccoon City.",
+"clip": {
+"src": "t1",
+"t": 182
+},
+"keys": [
+"Raccoon"
+]
+},
+{
+"say": "But GTA 6 leads with 8 nominations.",
+"clip": {
+"src": "t1",
+"t": 84
+},
+"num": "8",
+"keys": [
+"GTA",
+"8"
+],
+"glitch": true
+},
+{
+"say": "007 First Light and Zelda are fighting too.",
+"clip": {
+"src": "t1",
+"t": 93
+},
+"keys": [
+"Zelda"
+]
+},
+{
+"say": "Winners drop on December 10.",
+"clip": {
+"src": "t1",
+"t": 60
+},
+"num": "10",
+"keys": [
+"December"
+]
+},
+{
+"say": "Is Requiem the real Game of the Year?",
+"clip": {
+"src": "t1",
+"t": 113
+},
+"keys": [
+"Requiem"
+],
+"glitch": true
+}
+],
+"outro_say": "Follow Gaming Sane for daily gaming news."
+}

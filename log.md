@@ -6,3 +6,6 @@
 | 2026-11-19 | WE | WE_2026-11-19_bnpl_21b | $21 Billion on Buy Now, Pay Later This Holiday | 11-20 08:00 |
 | 2026-11-19 | GS | GS_2026-11-19_gta6_xbox_one | You CAN Play GTA 6 on Xbox One | YT 20:30 / IG 21:16 |
 | 2026-11-19 | GS | GS_2026-11-19_gta6_vs_gta5_records | Can GTA 6 Break GTA 5's Records? | 23:30 |
+| 2026-11-20 | GS | GS_2026-11-20_gta6_8_noms | GTA 6 Got 8 Game Awards Nominations | 18:30 |
+| 2026-11-20 | GS | GS_2026-11-20_007_goty | James Bond Is Up For Game of the Year | 21:30 |
+| 2026-11-20 | GS | GS_2026-11-20_re9_goty | Resident Evil Requiem vs GTA 6 for Game of the Year | 11-21 00:30 |
