@@ -1,0 +1,374 @@
+{
+"id": "WE_2026-11-20_anthropic_ipo",
+"theme": "we",
+"speed": 1.12,
+"beats": [
+{
+"say": "Anthropic just raised 81.3 billion dollars in a single IPO.",
+"bg": {},
+"card": {
+"type": "studio",
+"els": [
+{
+"k": "icon",
+"n": "Money bag",
+"x": 540,
+"y": 680,
+"s": 420
+},
+{
+"k": "icon",
+"n": "Coin",
+"x": 230,
+"y": 500,
+"s": 130,
+"r": -15
+},
+{
+"k": "icon",
+"n": "Coin",
+"x": 860,
+"y": 560,
+"s": 110,
+"r": 20
+},
+{
+"k": "num",
+"t": "$81.3B",
+"y": 1060,
+"s": 200
+}
+]
+},
+"keys": [
+"81.3"
+]
+},
+{
+"say": "That is the biggest IPO in history.",
+"bg": {},
+"card": {
+"type": "studio",
+"els": [
+{
+"k": "icon",
+"n": "Trophy",
+"x": 540,
+"y": 720,
+"s": 440
+},
+{
+"k": "icon",
+"n": "Crown",
+"x": 540,
+"y": 450,
+"s": 170,
+"r": -8
+},
+{
+"k": "chip",
+"t": "RECORD",
+"x": 120,
+"y": 420
+}
+]
+},
+"keys": [
+"biggest"
+]
+},
+{
+"say": "It beat SpaceX's $75 billion IPO from June.",
+"bg": {},
+"card": {
+"type": "studio",
+"els": [
+{
+"k": "bars",
+"items": [
+{
+"label": "SpaceX",
+"value": "$75B",
+"num": 75
+},
+{
+"label": "Anthropic",
+"value": "$81.3B",
+"num": 81.3
+}
+]
+},
+{
+"k": "icon",
+"n": "Rocket",
+"x": 860,
+"y": 470,
+"s": 150,
+"r": 20
+}
+]
+},
+"keys": [
+"SpaceX's"
+]
+},
+{
+"say": "The company behind Claude priced its shares at 83 dollars.",
+"bg": {},
+"card": {
+"type": "studio",
+"els": [
+{
+"k": "logo",
+"img": "commons:Anthropic logo.svg",
+"x": 540,
+"y": 650,
+"s": 340
+},
+{
+"k": "pill",
+"t": "$83 / share",
+"x": 290,
+"y": 920,
+"s": 80
+}
+]
+},
+"keys": [
+"83"
+]
+},
+{
+"say": "On day one, the stock opened at $111.50.",
+"bg": {},
+"card": {
+"type": "studio",
+"els": [
+{
+"k": "logo",
+"img": "commons:NASDAQ Logo.svg",
+"x": 540,
+"y": 560,
+"s": 260
+},
+{
+"k": "num",
+"t": "$111.50",
+"y": 930,
+"s": 190
+},
+{
+"k": "icon",
+"n": "Rocket",
+"x": 880,
+"y": 1130,
+"s": 150,
+"r": 15
+}
+]
+},
+"keys": [
+"$111.50."
+]
+},
+{
+"say": "That's 34% above the offer price.",
+"bg": {},
+"card": {
+"type": "studio",
+"els": [
+{
+"k": "num",
+"t": "+34%",
+"y": 620,
+"s": 240,
+"gold": true
+},
+{
+"k": "icon",
+"n": "Chart increasing",
+"x": 540,
+"y": 960,
+"s": 300
+},
+{
+"k": "icon",
+"n": "Fire",
+"x": 200,
+"y": 1000,
+"s": 130
+}
+]
+},
+"keys": [
+"34%"
+]
+},
+{
+"say": "At the peak, Anthropic was worth more than $2 trillion.",
+"bg": {},
+"card": {
+"type": "studio",
+"els": [
+{
+"k": "num",
+"t": "$2T+",
+"y": 640,
+"s": 260,
+"gold": true
+},
+{
+"k": "icon",
+"n": "Gem stone",
+"x": 540,
+"y": 980,
+"s": 300
+},
+{
+"k": "icon",
+"n": "Crown",
+"x": 850,
+"y": 440,
+"s": 140,
+"r": 15
+}
+]
+},
+"keys": [
+"$2"
+]
+},
+{
+"say": "Then it faded, closing at 97.17, still up 17%.",
+"bg": {},
+"card": {
+"type": "studio",
+"els": [
+{
+"k": "bars",
+"items": [
+{
+"label": "Offer",
+"value": "$83",
+"num": 83
+},
+{
+"label": "Open",
+"value": "$111.50",
+"num": 111.5
+},
+{
+"label": "Close",
+"value": "$97.17",
+"num": 97.17
+}
+]
+},
+{
+"k": "pill",
+"t": "+17%",
+"x": 720,
+"y": 420,
+"s": 70
+}
+]
+},
+"keys": [
+"97.17,"
+]
+},
+{
+"say": "Its seven co-founders are now worth about $20 billion each on paper.",
+"bg": {},
+"card": {
+"type": "studio",
+"els": [
+{
+"k": "grid",
+"icon": "Bust in silhouette",
+"n": 7,
+"cols": 7,
+"s": 130,
+"y": 540
+},
+{
+"k": "num",
+"t": "$20B each",
+"y": 930,
+"s": 170,
+"gold": true
+},
+{
+"k": "icon",
+"n": "Money with wings",
+"x": 540,
+"y": 1160,
+"s": 150
+}
+]
+},
+"keys": [
+"$20"
+]
+},
+{
+"say": "At about $1.5 trillion, it's worth more than Walmart or JPMorgan.",
+"bg": {},
+"card": {
+"type": "studio",
+"els": [
+{
+"k": "num",
+"t": "$1.5T",
+"y": 560,
+"s": 230
+},
+{
+"k": "icon",
+"n": "Shopping cart",
+"x": 300,
+"y": 930,
+"s": 230
+},
+{
+"k": "icon",
+"n": "Bank",
+"x": 780,
+"y": 930,
+"s": 230
+}
+]
+},
+"keys": [
+"$1.5"
+]
+},
+{
+"say": "Would you buy Anthropic stock at 97 dollars? Tell me below.",
+"bg": {},
+"card": {
+"type": "studio",
+"els": [
+{
+"k": "icon",
+"n": "Thinking face",
+"x": 540,
+"y": 700,
+"s": 400
+},
+{
+"k": "pill",
+"t": "BUY at $97?",
+"x": 270,
+"y": 1010,
+"s": 80
+}
+]
+},
+"keys": [
+"buy"
+]
+}
+],
+"outro_say": "Follow Wealth Extreme for the money behind the headlines."
+}

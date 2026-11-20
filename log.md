@@ -9,3 +9,6 @@
 | 2026-11-20 | GS | GS_2026-11-20_gta6_8_noms | GTA 6 Got 8 Game Awards Nominations | 18:30 |
 | 2026-11-20 | GS | GS_2026-11-20_007_goty | James Bond Is Up For Game of the Year | 21:30 |
 | 2026-11-20 | GS | GS_2026-11-20_re9_goty | Resident Evil Requiem vs GTA 6 for Game of the Year | 11-21 00:30 |
+| 2026-11-20 | WE | WE_2026-11-20_anthropic_ipo | Anthropic Just Pulled Off the Biggest IPO in History | 11-20 19:30 |
+| 2026-11-20 | WE | WE_2026-11-20_walmart_188b | Walmart Made $188.8 Billion in 3 Months | 11-21 02:30 |
+| 2026-11-20 | WE | WE_2026-11-20_rule_of_72 | The Rule of 72: How Fast Your Money Doubles | 11-21 08:00 |
